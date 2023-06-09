@@ -6,22 +6,19 @@ import { PublicModule } from './public/public.module';
 
 
 import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
-import { SecureComponent } from './secure/secure.component';
 
+import { SecureComponent } from './secure/secure.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
     SecureComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    PublicModule
+    PublicModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

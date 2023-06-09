@@ -2,21 +2,22 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { PublicComponent } from './public/public.component';
 
-import { UsersComponent } from './users/users.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { SecureComponent } from './secure/secure.component';
 
 import { LoginComponent } from './public/login/login.component';
 import { HomeComponent } from './public/home/home.component';
+import { RegisterComponent } from './public/register/register.component';
 
 const routes : Routes = [
   {path: '', component : PublicComponent,
     children:[
       {path:'', component: HomeComponent},
-      {path: 'login', component: LoginComponent}
+      {path: 'login', component: LoginComponent},
+      {path: 'register', component: RegisterComponent}
     ]
   },
-  {path: 'users', component : UsersComponent},
+
   {path: 'secure', component : SecureComponent},
 
 ] ;

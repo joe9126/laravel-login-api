@@ -1,0 +1,17 @@
+<form [formGroup]="registerForm" class="form card" (submit)="submitRegistration()">
+    <p class="display-6 mb-3 text-center">Sign Up Today</p>
+    <div class="row">
+      <div class="col-6">
+        <input formControlName="first_name" type="text" class="form-control" placeholder="First Name"/>
+      </div>
+      <div class="col-6">
+        <input formControlName="last_name" type="text" class="form-control" placeholder="Last Name"/>
+      </div>
+    </div>
+
+
+    <input formControlName="email" type="text" class="form-control" placeholder="Email Address"/>
+    <input formControlName="password" type="password" class="form-control" placeholder="Password"/>
+    <input formControlName="password_confirmation" type="password" class="form-control" placeholder="Confirm Password"/>
+    <button type="submit" class="btn btn-block btn-primary mb-lg-3" [disabled]="!registerForm.valid">Sign Up</button>
+  </form>

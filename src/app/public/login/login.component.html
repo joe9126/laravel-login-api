@@ -1,1 +1,10 @@
-<p>login works!</p>
+
+
+  <form [formGroup]="loginform" class="form card" (submit)="submitLogin()">
+    <p class="display-6 mb-3 text-center">Please Login</p>
+    <input formControlName="email" type="text" class="form-control" placeholder="Username"/>
+    <input formControlName="password" type="password" class="form-control" placeholder="Password"/>
+    <button type="submit" class="btn btn-block btn-primary mb-lg-3">Login</button>
+  </form>
+
+
